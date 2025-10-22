@@ -265,7 +265,8 @@ div {
 
 .terminos {
     display: grid;
-    grid-template-columns: 5% 95%
+    grid-template-columns: 5% 95%;
+    column-gap: 1rem;
 }
 
 .terminos input {
@@ -322,11 +323,6 @@ div {
     padding: 0 1.5rem
 }
 
-#disabled-colegio,
-#disabled-distrito-colegio {
-    background-color: #c1c5c9;
-}
-
 .input__item {
     border-radius: .5rem;
     border: .2px solid #000;
@@ -337,14 +333,11 @@ div {
     font-size: 1.5rem;
     color: #000;
     max-width: 42.5rem;
+    max-width: 100% !important;
 }
 
 #top {
     position: relative;
-}
-
-.terminos {
-    column-gap: 1rem;
 }
 
 #popup {
@@ -417,12 +410,6 @@ div {
     color: white;
 }
 
-#carrerasSeleccionadas {
-    display: flex;
-    flex-direction: column;
-    row-gap: 1.5rem;
-}
-
 .formulario {
     width: 50rem !important;
 }
@@ -434,10 +421,6 @@ div {
 }
 
 .formulario__content {
-    max-width: 100% !important;
-}
-
-.input__item {
     max-width: 100% !important;
 }
 
@@ -467,16 +450,6 @@ div {
 .form__content div select {
     border-radius: .5rem;
     height: 100%;
-}
-
-.content-departamento .content-desc {
-    display: none;
-    align-items: center;
-    column-gap: 1rem;
-}
-
-.content-desc h4 {
-    margin: 0;
 }
 
 .check-content {
