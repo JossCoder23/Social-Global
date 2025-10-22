@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"> -->
+    <script src="./colegios.js"></script>
+    <script src="./datepicker.js"></script>
+    <script src="./date.js"></script>
+</head>
+
+<body>
+    <div id="popup">
+        <div class="ctnPopup">
+            <div class="ctnCerrar">
+                <div id="cerrarPop" class="cerrarPop">
+                    X
+                </div>
+            </div>
+            <h3> CONDICIONES PARA EL TRATAMIENTO DE DATOS PERSONALES DE INTERESADOS</h3>
+            <p>De acuerdo con la Ley N° 29733 - Ley de Protección de Datos Personales, su Reglamento y modificaciones,
+                otorgo mi consentimiento libre, previo, inequívoco, expreso e informado a la Universidad Peruana
+                Cayetano Heredia (en adelante, UPCH), con RUC N° 20110768151, para que mis datos personales queden
+                incorporados en el Banco de Datos Personales denominado “Interesados”, con la finalidad de administrar y
+                gestionar los datos personales de los interesados en todos los servicios ofrecidos por la UPCH y
+                resolver sus consultas, así como para darle los usos previstos de publicidad y prospección comercial,
+                fines estadísticos e históricos, análisis de perfiles, seguridad y prevención de riesgos, seguridad y
+                control de acceso a la UPCH.</p>
+            <p>Si no doy mi consentimiento, la UPCH no podrá tratar mis datos personales, lo que impedirá atender mi
+                solicitud o cumplir con las finalidades indicadas.</p>
+            <p>La UPCH realizará la transferencia nacional de mis datos personales a organizaciones o personas
+                directamente relacionadas y otras entidades públicas. Además, llevará a cabo la transferencia
+                internacional de dichos datos para su almacenamiento a través de Microsoft Corporation, ubicada en One
+                Microsoft Way, Redmond, WA 98052 y Google LLC, ubicada en 1600 Amphitheatre Parkway, Mountain View, CA
+                94043, ambos con sede en los Estados Unidos. Para gestionar la comunicación, también se realizará
+                transferencia de datos a Meta Platforms Inc., ubicada en 1601 Willow Road, Menlo Park, CA 94025; Amazon
+                Web Services, ubicada en 1800 S Bell St. Arlington, VA 22202, ambos con sede en los Estados Unidos y a
+                TikTok, ubicada en No. 48, Zhichun Road, Haidian, Beijing City, 100098, Pekín, China.</p>
+            <p>Acepto que mis datos personales sean tratados por el tiempo necesario, con el propósito de cumplir las
+                finalidades previamente indicadas.</p>
+            <p>He sido informado que puedo ejercer mi derecho de información, acceso, rectificación, cancelación,
+                oposición y otros derechos que me asisten como titular de los datos personales o revocar mi
+                consentimiento. Para ejercer dichos derechos, puedo dirigirme al Área de Protección de Datos Personales
+                de la Dirección de Tecnología de la Información, ubicada en Av. Honorio Delgado N° 430, Urb. Ingeniería,
+                San Martín de Porres, Lima, o acceder a la página web:
+                www.cayetano.edu.pe/proteccion-de-datos-personales y completar la "Solicitud de Derechos del Titular de
+                Datos Personales".</p>
+            <p> La UPCH garantiza la estricta confidencialidad de mis datos personales y los tratará conforme a lo
+                establecido en su Política de Privacidad y Protección de Datos Personales.</p>
+        </div>
+    </div>
+    <div class="global__container">
+        <div class="crmWebToEntityForm container__form" id="crmWebToEntityForm">
+            <div class="logo__container"><img class="upch_logo"
+                    src="https://upch-repo-comercial.s3.dualstack.us-east-1.amazonaws.com/17-03-25/logo-promo-1703.webp"
+                    lazy="loading"></div>
+            <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+            <style>
+                .oculto {
+                    display: none;
+                }
+            </style>
+            <div class="formulario">
+                <div class="formulario__title">
+                    <h3>REGISTRO LEADS - SOCIAL MEDIA GLOBAL</h3>
+                </div>
+                <select class="requerido input__item" id="LEADCF209" name="LEADCF209" required="">
+                    <option value="" disabled="" selected="">- Selecciona el producto -</option>
+                    <option value="pregrado">Pregrado</option>
+                    <option value="servicios">Pre-CEPU</option>
+                    <option value="posgrado" disabled>Posgrado</option>
+                </select>
+
+                <form id="pregrado__formulario--content" class="form__content">
+                    <div class="input__duo">
+                        <input class="input__item" id="first-name" type="text" name="first-name" maxlength="40" required
+                            autocomplete="off" placeholder="Primer Nombre*" />
+                        <input class="input__item" id="first-last-name" type="text" name="first-last-name"
+                            maxlength="40" required autocomplete="off" placeholder="Apellido Paterno*" />
+                    </div>
+                    <div class="input__duo">
+                        <input class="input__item" id="second-last-name" type="text" name="second-last-name"
+                            maxlength="40" required autocomplete="off" placeholder="Apellido Materno*" />
+                        <input class="input__item" id="phone" type="text" name="phone" maxlength="9" pattern="9[0-9]{8}"
+                            required autocomplete="off" placeholder="Celular*" />
+                    </div>
+                    <div class="input__duo">
+                        <select class="input__item" id="type-document" name="type-document" required>
+                            <option value="" disabled selected>- Tipo de Documento -</option>
+                            <option value="994950000">DNI</option>
+                            <option value="994950001">Carnet de Extranjeria</option>
+                            <option value="994950002">Pasaporte</option>
+                        </select>
+                        <input class="input__item" id="number-document" type="text" name="number-document"
+                            maxlength="20" required autocomplete="off" placeholder="N.° de documento*" />
+                    </div>
+                    <input class="input__item" id="email" type="email" name="email" maxlength="100" required
+                        autocomplete="off" placeholder="Correo*" />
+                    <div class="check-content">
+                        <div class="check-item padres">
+                            <input id="data-padre" name="check" type="checkbox">
+                            <label for="data-padre">Datos del Padre</label>
+                        </div>
+                        <div class="check-item descentralizado">
+                            <input id="data-desc" name="check" type="checkbox">
+                            <label for="data-desc">Descentralizado</label>
+                        </div>
+                    </div>
+                    <div class="content-departamento">
+                        <select class="requerido input__item" id="modular" name="type-document">
+                            <option value="" disabled selected>- Selecciona sede -</option>
+                            <option value="2ae2e238-3bee-ef11-be21-002248d2d786">Arequipa</option>
+                            <option value="2ce2e238-3bee-ef11-be21-002248d2d786">Ayacucho</option>
+                            <option value="3ee2e238-3bee-ef11-be21-002248d2d786">Chiclayo</option>
+                            <option value="32e2e238-3bee-ef11-be21-002248d2d786">Cuzco</option>
+                            <option value="3ae2e238-3bee-ef11-be21-002248d2d786">Huancayo</option>
+                        </select>
+                    </div>
+                    <div class="padreContainer">
+                        <div class="input__duo">
+                            <input class="input__item" id="nombre_padre" type="text" name="nombre_padre" maxlength="40"
+                                placeholder="Nombre Padre">
+                            <input class="input__item" id="last_padre" type="text" name="last_padre" maxlength="40"
+                                placeholder="Apellido Padre">
+                        </div>
+                        <div class="input__duo">
+                            <input class="input__item" id="correo_padre" type="text" name="correo_padre" maxlength="40"
+                                placeholder="Correo Padre">
+                            <input class="input__item" id="movil_padre" type="text" name="movil_padre" maxlength="40"
+                                placeholder="Celular Padre">
+                        </div>
+                    </div>
+                    <select class="requerido input__item selectPrograma" id="type" required="">
+                        <option value="" disabled="" selected="">- Tipo de Programa -</option>
+                        <option value="pregrado">Pregrado OPG</option>
+                        <option value="pge">PGE</option>
+                        <option value="especialidades">Especialidades</option>
+                    </select>
+                    <select class="input__item" id="tipo-especialidad">
+                        <option value="" disabled="" selected="">- Tipo de Especialidad -</option>
+                        <option value="enf">Enfermería</option>
+                        <option value="est">Estomatología</option>
+                        <option value="vet">Veterinaria</option>
+                        <option value="tm">Tecnologías Médicas</option>
+                    </select>
+
+                    <select class="input__item" id="career" name="career" required>
+                        <option value disabled selected>- Seleccionar carrera -</option>
+                    </select>
+
+                    <select class="input__item" id="degree-study" name="degree-study">
+                        <option value="" disabled selected>¿En qué grado se encuentra?</option>
+                    </select>
+
+                    <select class="input__item" id="degree-study-pos" name="degree-study-pos">
+                        <option value="" disabled selected>¿En qué grado se encuentra?</option>
+                    </select>
+
+                    <select class="UTM input__item" id="utm_campaign" type="text" name="utm_campaign" required="">
+                        <option value="" disabled="" selected="">UTM Campa&ntilde;a</option>
+                    </select>
+
+                    <select class="requerido input__item" id="utm_source" name="utm_source" required="">
+                        <option value="" disabled="" selected="">UTM Source</option>
+                        <option value="Facebook">Facebook</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="Tiktok">Tiktok</option>
+                        <option value="Youtube">Youtube</option>
+                        <option value="Linkedin">Linkedin</option>
+                        <option value="Whatsapp">Whatsapp</option>
+                    </select>
+                    <div class="oculto">
+                        <!-- <input class="UTM" id="utm_source" name="LEADCF183" value="social">  utm_content-->
+                        <input class="UTM" id="utm_medium" name="LEADCF189" value="social">
+                        <!-- utm_medium-->
+                        <!-- <input class="UTM" id="utm_campaign" name="LEADCF24" value=""> utm_campaign-->
+                        <input class="UTM" id="utm_id" name="LEADCF203" value="digital">
+                        <!-- utm_ID-->
+                        <input class="UTM" id="utm_term" name="LEADCF184" value="hijos">
+                        <!-- utm-term-->
+                        <input class="UTM" id="utm_content" name="LEADCF182" value="inbox">
+                        <!-- utm_content-->
+                        <input id="reference" name="LEADCF168" value="">
+                        <!-- reference-->
+                        <!-- <input class="" id="LEADCF2" name="LEADCF2" value="">-->
+                        <input id="LEADCF185" name="LEADCF185" value="PREGRADO">
+                        <!-- marca-->
+                        <input id="LEADCF7" name="LEADCF7" value="">
+                        <input name="Lead Status" value="Sin gestión">
+                        <!-- lead status-->
+                        <input name="LEADCF1" value="Automáticos">
+                        <!-- tipo_origen-->
+                        <input name="LEADCF198" value="Postulante">
+                        <!-- parentezco-->
+                        <input name="Lead Source" value="Landing Page">
+                        <!-- fuente_lead-->
+                        <input id="LEADCF22" name="LEADCF22" value="">
+                        <!-- comentario-->
+                        <input id="LEADCF194" name="LEADCF194" value="">
+                        <!-- horario_disponible-->
+                        <!-- <input class="" id="LEADCF220" name="LEADCF302" value="Tecnología Médica Terapia Ocupacional"> programa_academico-->
+                        <input id="LEADCF10" name="LEADCF10" value="">
+                        <!-- periodo-->
+                    </div>
+                    <div class="terminos">
+                        <input type="checkbox" required />
+                        <h3 id="labelCheckbox">
+                            Declaro haber leído y acepto la
+                            <a href="https://cayetano.edu.pe/politica-privacidad/" target="_blank"
+                                style="text-decoration: underline; font-size:1.4rem;"> Política de Privacidad
+                            </a>, y autorizo a la Cayetano, conforme a lo establecido <span id="pop"
+                                style="text-decoration:underline;cursor:pointer;">aquí</span>, el tratamiento de mis
+                            datos personales.
+                        </h3>
+                    </div>
+                    <div class="formulario__bottom">
+                        <button class="form__button" type="submit">
+                            <h3>Registrar lead en CRM</h3>
+                        </button>
+                    </div>
+                </form>
+
+                <form id="servicios__formulario--content" class="form__content">
+                    <!--<div class="input__duo trio">-->
+                    <!--  <input class="requerido input__item" id="LEADCF204" type="text" name="LEADCF204" placeholder="Codigo Modular" required="">-->
+                    <!--  <input class="input__item disabled__item" type="text" value="Colegio" id="disabled-colegio" disabled="true">-->
+                    <!--  <input class="input__item disabled__item" type="text" value="Distrito Colegio" id="disabled-distrito-colegio" disabled="true">-->
+                    <!--</div>-->
+                    <!--<div id="container__error">-->
+                    <!--  <h3>NO SE ENCONTRÓ EL CODIGO MODULAR </h3>-->
+                    <!--</div>-->
+                    <!--<div class="input__duo trio">-->
+                    <!--  <select class="requerido input__item" id="LEADCF13" name="LEADCF13" required="">-->
+                    <!--    <option value="" disabled="" selected="">- Promotor -</option>-->
+                    <!--    <option value="1ab07ab0-d756-f011-bec2-6045bd3a2cb5">Valerin Alburquerque</option>-->
+                    <!--    <option value="a66076a4-d756-f011-bec2-6045bd3a2cb5">Robert Ch&aacute;vez</option>-->
+                    <!--    <option value="42a76d98-d756-f011-bec2-6045bd3a2cb5">Jean Paul Carillo</option>-->
+                    <!--    <option value="1834c4b6-d756-f011-bec2-6045bd3a2cb5">Dana Lizarme</option>-->
+                    <!--    <option value="fde17d9e-d756-f011-bec2-6045bd3a2cb5">Kemerly Isla</option>-->
+                    <!--    <option value="4a8a6492-d756-f011-bec2-6045bd3a2cb5">Flavia De la Cruz</option>-->
+                    <!--    <option value="1bc7698c-d756-f011-bec2-6045bd3a2cb5">Eva Esquivel</option>-->
+                    <!--    <option value="bb72bc7f-d756-f011-bec2-6045bd3a2cb5">Clara Trelles</option>-->
+                    <!--  </select>-->
+                    <!--  <select class="requerido input__item" id="LEADCF209" name="LEADCF209" required="">-->
+                    <!--    <option value="" disabled="" selected="">Actividad</option>-->
+                    <!--    <option value="charla-institucional">Charla Institucional</option>-->
+                    <!--    <option value="ov-alumnos">OV Alumnos</option>-->
+                    <!--    <option value="charla-carreras">Charla Carreras</option>-->
+                    <!--    <option value="taller-carreras">Taller Carreras</option>-->
+                    <!--    <option value="feria-vocacional">Feria Vocacional</option>-->
+                    <!--    <option value="ov-padres">OV Padres</option>-->
+                    <!--    <option value="ov-docentes">OV Docentes</option>-->
+                    <!--    <option value="visita-guiada">Visita Guiada</option>-->
+                    <!--    <option value="simulacro">Simulacro</option>-->
+                    <!--    <option value="open-cayetano">Open Cayetano</option>-->
+                    <!--  </select>-->
+                    <!--  <input class="input__item" id="LEADCF208" type="text" name="LEADCF208" placeholder="Fecha de Evento" maxlength="10" required="">-->
+                    <!--</div>-->
+                    <!--<div class="input__duo trio">-->
+                    <!--    <input class="input__item requerido" id="name" type="text" name="First Name" maxlength="40" placeholder="Nombres" required="">-->
+                    <!--    <input class="input__item requerido" id="lastname" type="text" name="Last Name" maxlength="40" placeholder="Apellido Paterno" required="">-->
+                    <!--    <input class="requerido input__item" id="second_lastname" type="text" name="LEADCF38" maxlength="40" placeholder="Apellido Materno*" required="">-->
+                    <!--</div>-->
+                    <!--<div class="input__duo">-->
+                    <!--    <input class="requerido input__item" id="email" type="text" name="Email" ftype="email" maxlength="120" placeholder="Correo">-->
+                    <!--    <select class="requerido input__item" id="degree-study" name="LEADCF14" required="">-->
+                    <!--    <option value="" disabled="" selected="">- Grado -</option>-->
+                    <!--    <option value="994950000">3ro. de secundaria</option>-->
+                    <!--    <option value="994950001">4to. de secundaria</option>-->
+                    <!--    <option value="994950002">5to. de secundaria</option>-->
+                    <!--    <option value="994950003">Egresado de Colegio</option>-->
+                    <!--    <option value="994950004">Estudiando en Instituto</option>-->
+                    <!--    <option value="994950005">Estudiando en Universidad</option>-->
+                    <!--    <option value="994950006">Egresado de Instituto</option>-->
+                    <!--    <option value="994950007">Egresado de Universidad</option>-->
+                    <!--  </select>-->
+                    <!--</div>-->
+                    <!--<div class="input__duo trio">-->
+                    <!--  <input class="requerido input__item" id="phone" type="text" placeholder="Celular*" name="Mobile" maxlength="9" pattern="9[0-9]{8}" required="">-->
+                    <!--  <input class="requerido input__item" id="phone2" type="text" placeholder="Whatsapp*" name="LEADCF210" maxlength="9" pattern="9[0-9]{8}">-->
+                    <!--  <input class="requerido input__item" id="number-document" type="text" name="LEADCF21" maxlength="8" placeholder="DNI N°">-->
+                    <!--</div>-->
+                    <!--<div class="terminos">-->
+                    <!--  <input id="tutor" type="checkbox" autocomplete="off" name="privacyTool">-->
+                    <!--  <label for="tutor" class="tutor">Datos del tutor, padre o madre</label>-->
+                    <!--</div>-->
+                    <!--<div class="input__duo trio tutores" style="display:none;">-->
+                    <!--    <input class="requerido input__item input__tutor" id="LEADCF211" type="text" placeholder="Nombre del padre, madre o apoderado" name="LEADCF211" maxlength="50">-->
+                    <!--    <input class="requerido input__item input__tutor" id="LEADCF213" type="text" placeholder="Celular del padre, madre o apoderado" name="LEADCF213" maxlength="9" pattern="9[0-9]{8}">-->
+                    <!--    <input class="requerido input__item input__tutor" id="LEADCF212" type="text" placeholder="Correo del padre, madre o apoderado" name="LEADCF212" maxlength="50">-->
+                    <!--</div>-->
+                    <!--<div class="input__duo"> -->
+                    <!--  <select class="requerido input__item" id="LEADCF3" name="LEADCF3">-->
+                    <!--    <option value="" disabled="" selected="">Modalidad de Interés</option>-->
+                    <!--    <option value="4fcc0775-eef9-ef11-bae3-002248383b9f">Factor Quinto</option>-->
+                    <!--    <option value="41cc0775-eef9-ef11-bae3-002248383b9f">Factor excelencia</option>-->
+                    <!--    <option value="5dcc0775-eef9-ef11-bae3-002248383b9f">IEA</option>-->
+                    <!--    <option value="35cc0775-eef9-ef11-bae3-002248383b9f">Examen general de admisión</option>-->
+                    <!--    <option value="47cc0775-eef9-ef11-bae3-002248383b9f">Pre Cayetano</option>-->
+                    <!--  </select>-->
+                    <!--  <select class="requerido input__item" id="LEADCF33" name="LEADCF33" required="">-->
+                    <!--    <option value="" disabled="" selected="">Nivel de interés</option>-->
+                    <!--    <option value="si">Sí</option>-->
+                    <!--    <option value="evaluando">Evaluando</option>-->
+                    <!--    <option value="no">No</option>-->
+                    <!--  </select>-->
+                    <!--</div>-->
+                    <!--<div class="input__duo trio">-->
+                    <!--    <select class="requerido input__item" id="career">-->
+                    <!--        <option value="" disabled="" selected="">Selecciona 1ra carrera</option>-->
+                    <!--        <option value="2a6372f8-161f-f011-998b-002248383b9f">Administración</option>-->
+                    <!--        <option value="2c6372f8-161f-f011-998b-002248383b9f">Administración en Salud</option>-->
+                    <!--        <option value="006372f8-161f-f011-998b-002248383b9f">Biología</option>-->
+                    <!--        <option value="146372f8-161f-f011-998b-002248383b9f">Educación</option>-->
+                    <!--        <option value="166372f8-161f-f011-998b-002248383b9f">Enfermería</option>-->
+                    <!--        <option value="186372f8-161f-f011-998b-002248383b9f">Estomatología</option>-->
+                    <!--        <option value="026372f8-161f-f011-998b-002248383b9f">Farmacia y Bioquimica</option>-->
+                    <!--        <option value="5edd571c-fa3f-f011-877a-6045bd3c8409">Gestión de Desarrollo Global</option>-->
+                    <!--        <option value="066372f8-161f-f011-998b-002248383b9f">Ingeniería Ambiental</option>-->
+                    <!--        <option value="086372f8-161f-f011-998b-002248383b9f">Ingeniería Biomédica</option>-->
+                    <!--        <option value="0a6372f8-161f-f011-998b-002248383b9f">Ingeniería Industrial</option>-->
+                    <!--        <option value="0e6372f8-161f-f011-998b-002248383b9f">Ingeniería Informática</option>-->
+                    <!--        <option value="1c6372f8-161f-f011-998b-002248383b9f">Laboratorio Clínico y Anatomía Patológica</option>-->
+                    <!--        <option value="1a6372f8-161f-f011-998b-002248383b9f">Medicina</option>-->
+                    <!--        <option value="2e6372f8-161f-f011-998b-002248383b9f">Medicina Veterinaria y Zootecnia</option>-->
+                    <!--        <option value="046372f8-161f-f011-998b-002248383b9f">Nutrición</option>-->
+                    <!--        <option value="266372f8-161f-f011-998b-002248383b9f">Psicología</option>-->
+                    <!--        <option value="1e6372f8-161f-f011-998b-002248383b9f">Radiología</option>-->
+                    <!--        <option value="226372f8-161f-f011-998b-002248383b9f">Terapia Física y Rehabilitación</option>-->
+                    <!--        <option value="246372f8-161f-f011-998b-002248383b9f">Terapia Ocupacional</option>-->
+                    <!--        <option value="206372f8-161f-f011-998b-002248383b9f">Terapia de Lenguaje</option>-->
+                    <!--    </select>-->
+                    <!--    <select class="requerido input__item" id="career2">-->
+                    <!--        <option value="" disabled="" selected="">Selecciona 2da carrera</option>-->
+                    <!--        <option value="2a6372f8-161f-f011-998b-002248383b9f">Administración</option>-->
+                    <!--        <option value="2c6372f8-161f-f011-998b-002248383b9f">Administración en Salud</option>-->
+                    <!--        <option value="006372f8-161f-f011-998b-002248383b9f">Biología</option>-->
+                    <!--        <option value="146372f8-161f-f011-998b-002248383b9f">Educación</option>-->
+                    <!--        <option value="166372f8-161f-f011-998b-002248383b9f">Enfermería</option>-->
+                    <!--        <option value="186372f8-161f-f011-998b-002248383b9f">Estomatología</option>-->
+                    <!--        <option value="026372f8-161f-f011-998b-002248383b9f">Farmacia y Bioquimica</option>-->
+                    <!--        <option value="5edd571c-fa3f-f011-877a-6045bd3c8409">Gestión de Desarrollo Global</option>-->
+                    <!--        <option value="066372f8-161f-f011-998b-002248383b9f">Ingeniería Ambiental</option>-->
+                    <!--        <option value="086372f8-161f-f011-998b-002248383b9f">Ingeniería Biomédica</option>-->
+                    <!--        <option value="0a6372f8-161f-f011-998b-002248383b9f">Ingeniería Industrial</option>-->
+                    <!--        <option value="0e6372f8-161f-f011-998b-002248383b9f">Ingeniería Informática</option>-->
+                    <!--        <option value="1c6372f8-161f-f011-998b-002248383b9f">Laboratorio Clínico y Anatomía Patológica</option>-->
+                    <!--        <option value="1a6372f8-161f-f011-998b-002248383b9f">Medicina</option>-->
+                    <!--        <option value="2e6372f8-161f-f011-998b-002248383b9f">Medicina Veterinaria y Zootecnia</option>-->
+                    <!--        <option value="046372f8-161f-f011-998b-002248383b9f">Nutrición</option>-->
+                    <!--        <option value="266372f8-161f-f011-998b-002248383b9f">Psicología</option>-->
+                    <!--        <option value="1e6372f8-161f-f011-998b-002248383b9f">Radiología</option>-->
+                    <!--        <option value="226372f8-161f-f011-998b-002248383b9f">Terapia Física y Rehabilitación</option>-->
+                    <!--        <option value="246372f8-161f-f011-998b-002248383b9f">Terapia Ocupacional</option>-->
+                    <!--        <option value="206372f8-161f-f011-998b-002248383b9f">Terapia de Lenguaje</option>-->
+                    <!--    </select>-->
+                    <!--    <select class="requerido input__item" id="career3">-->
+                    <!--        <option value="" disabled="" selected="">Selecciona 3ra carrera</option>-->
+                    <!--        <option value="2a6372f8-161f-f011-998b-002248383b9f">Administración</option>-->
+                    <!--        <option value="2c6372f8-161f-f011-998b-002248383b9f">Administración en Salud</option>-->
+                    <!--        <option value="006372f8-161f-f011-998b-002248383b9f">Biología</option>-->
+                    <!--        <option value="146372f8-161f-f011-998b-002248383b9f">Educación</option>-->
+                    <!--        <option value="166372f8-161f-f011-998b-002248383b9f">Enfermería</option>-->
+                    <!--        <option value="186372f8-161f-f011-998b-002248383b9f">Estomatología</option>-->
+                    <!--        <option value="026372f8-161f-f011-998b-002248383b9f">Farmacia y Bioquimica</option>-->
+                    <!--        <option value="5edd571c-fa3f-f011-877a-6045bd3c8409">Gestión de Desarrollo Global</option>-->
+                    <!--        <option value="066372f8-161f-f011-998b-002248383b9f">Ingeniería Ambiental</option>-->
+                    <!--        <option value="086372f8-161f-f011-998b-002248383b9f">Ingeniería Biomédica</option>-->
+                    <!--        <option value="0a6372f8-161f-f011-998b-002248383b9f">Ingeniería Industrial</option>-->
+                    <!--        <option value="0e6372f8-161f-f011-998b-002248383b9f">Ingeniería Informática</option>-->
+                    <!--        <option value="1c6372f8-161f-f011-998b-002248383b9f">Laboratorio Clínico y Anatomía Patológica</option>-->
+                    <!--        <option value="1a6372f8-161f-f011-998b-002248383b9f">Medicina</option>-->
+                    <!--        <option value="2e6372f8-161f-f011-998b-002248383b9f">Medicina Veterinaria y Zootecnia</option>-->
+                    <!--        <option value="046372f8-161f-f011-998b-002248383b9f">Nutrición</option>-->
+                    <!--        <option value="266372f8-161f-f011-998b-002248383b9f">Psicología</option>-->
+                    <!--        <option value="1e6372f8-161f-f011-998b-002248383b9f">Radiología</option>-->
+                    <!--        <option value="226372f8-161f-f011-998b-002248383b9f">Terapia Física y Rehabilitación</option>-->
+                    <!--        <option value="246372f8-161f-f011-998b-002248383b9f">Terapia Ocupacional</option>-->
+                    <!--        <option value="206372f8-161f-f011-998b-002248383b9f">Terapia de Lenguaje</option>-->
+                    <!--    </select>-->
+                    <!--</div>-->
+                    <!--<input class="requerido input__item" name="LEADCF35" type="text" placeholder="Otra Carrera" id="LEADCF35">-->
+                    <!--<div class="oculto">-->
+                    <!--  <input class="UTM" id="utm_source" name="LEADCF183" value="">-->
+                    <!--  <input class="UTM" id="utm_medium" name="LEADCF189" value="prospeccion">-->
+                    <!--  <input class="UTM" id="utm_campaign" name="LEADCF24" value="pregrado-2026-01">-->
+                    <!--  <input class="UTM" id="utm_id" name="LEADCF203" value="digital">-->
+                    <!--  <input class="UTM" id="utm_term" name="LEADCF184" value="">-->
+                    <!--  <input class="UTM" id="utm_content" name="LEADCF182" value="">-->
+                    <!--  <input id="reference" name="LEADCF168" value="">-->
+                    <!--  <input id="LEADCF185" name="LEADCF185" value="PREGRADO">-->
+                    <!--  <input name="Lead Status" value="Sin gestión">-->
+                    <!--  <input name="LEADCF1" value="Automáticos">-->
+                    <!--  <input name="LEADCF198" value="Postulante">-->
+                    <!--  <input name="Lead Source" value="Colegios">-->
+                    <!--  <input id="LEADCF22" name="LEADCF22" value="">-->
+                    <!--  <input id="LEADCF194" name="LEADCF194" value="">-->
+                    <!--  <input id="LEADCF10" name="LEADCF10" value="2026-1">-->
+                    <!--  <input id="LEADCF7" name="LEADCF7" value="Pregrado OPG">-->
+                    <!--  <input id="LEADCF220" name="LEADCF302" value="">-->
+                    <!--  <input id="LEADCF206" name="LEADCF206" value="">-->
+                    <!--  <input id="LEADCF36" name="LEADCF36" value="">-->
+                    <!--  <input id="modalidad" name="modalidad" value="ea5d3933-e6f9-ef11-bae3-002248383b9f"> -->
+                    <!--  <input class="" id="LEADCF34" name="LEADCF34" value="Si asecto">-->
+                    <!--</div>-->
+                    <!--<div class="terminos">-->
+                    <!--    <input type="checkbox" required />-->
+                    <!--    <h3 id="labelCheckbox">-->
+                    <!--        Declaro haber leído y acepto la-->
+                    <!--        <a href="https://cayetano.edu.pe/politica-privacidad/" target="_blank" style="text-decoration: underline; font-size:1.4rem;"> Política de Privacidad-->
+                    <!--        </a>, y autorizo a la Cayetano, conforme a lo establecido <span id="pop" style="text-decoration:underline;cursor:pointer;">aquí</span>, el tratamiento de mis datos personales.-->
+                    <!--    </h3>-->
+                    <!--</div>-->
+                    <!--<div class="formulario__bottom">-->
+                    <!--    <button class="form__button" type="submit">-->
+                    <!--      <h3>Registrar lead en CRM</h3>-->
+                    <!--    </button>-->
+                    <!--</div>-->
+                </form>
+
+                <form id="posgrado__formulario--content" class="form__content">
+                    <!--<div class="input__duo trio">-->
+                    <!--  <input class="requerido input__item" id="LEADCF204" type="text" name="LEADCF204" placeholder="Codigo Modular" required="">-->
+                    <!--  <input class="input__item disabled__item" type="text" value="Colegio" id="disabled-colegio" disabled="true">-->
+                    <!--  <input class="input__item disabled__item" type="text" value="Distrito Colegio" id="disabled-distrito-colegio" disabled="true">-->
+                    <!--</div>-->
+                    <!--<div id="container__error">-->
+                    <!--  <h3>NO SE ENCONTRÓ EL CODIGO MODULAR </h3>-->
+                    <!--</div>-->
+                    <!--<div class="input__duo trio">-->
+                    <!--  <select class="requerido input__item" id="LEADCF13" name="LEADCF13" required="">-->
+                    <!--    <option value="" disabled="" selected="">- Promotor -</option>-->
+                    <!--    <option value="1ab07ab0-d756-f011-bec2-6045bd3a2cb5">Valerin Alburquerque</option>-->
+                    <!--    <option value="a66076a4-d756-f011-bec2-6045bd3a2cb5">Robert Ch&aacute;vez</option>-->
+                    <!--    <option value="42a76d98-d756-f011-bec2-6045bd3a2cb5">Jean Paul Carillo</option>-->
+                    <!--    <option value="1834c4b6-d756-f011-bec2-6045bd3a2cb5">Dana Lizarme</option>-->
+                    <!--    <option value="fde17d9e-d756-f011-bec2-6045bd3a2cb5">Kemerly Isla</option>-->
+                    <!--    <option value="4a8a6492-d756-f011-bec2-6045bd3a2cb5">Flavia De la Cruz</option>-->
+                    <!--    <option value="1bc7698c-d756-f011-bec2-6045bd3a2cb5">Eva Esquivel</option>-->
+                    <!--    <option value="bb72bc7f-d756-f011-bec2-6045bd3a2cb5">Clara Trelles</option>-->
+                    <!--  </select>-->
+                    <!--  <select class="requerido input__item" id="LEADCF209" name="LEADCF209" required="">-->
+                    <!--    <option value="" disabled="" selected="">Actividad</option>-->
+                    <!--    <option value="charla-institucional">Charla Institucional</option>-->
+                    <!--    <option value="ov-alumnos">OV Alumnos</option>-->
+                    <!--    <option value="charla-carreras">Charla Carreras</option>-->
+                    <!--    <option value="taller-carreras">Taller Carreras</option>-->
+                    <!--    <option value="feria-vocacional">Feria Vocacional</option>-->
+                    <!--    <option value="ov-padres">OV Padres</option>-->
+                    <!--    <option value="ov-docentes">OV Docentes</option>-->
+                    <!--    <option value="visita-guiada">Visita Guiada</option>-->
+                    <!--    <option value="simulacro">Simulacro</option>-->
+                    <!--    <option value="open-cayetano">Open Cayetano</option>-->
+                    <!--  </select>-->
+                    <!--  <input class="input__item" id="LEADCF208" type="text" name="LEADCF208" placeholder="Fecha de Evento" maxlength="10" required="">-->
+                    <!--</div>-->
+                    <!--<div class="input__duo trio">-->
+                    <!--    <input class="input__item requerido" id="name" type="text" name="First Name" maxlength="40" placeholder="Nombres" required="">-->
+                    <!--    <input class="input__item requerido" id="lastname" type="text" name="Last Name" maxlength="40" placeholder="Apellido Paterno" required="">-->
+                    <!--    <input class="requerido input__item" id="second_lastname" type="text" name="LEADCF38" maxlength="40" placeholder="Apellido Materno*" required="">-->
+                    <!--</div>-->
+                    <!--<div class="input__duo">-->
+                    <!--    <input class="requerido input__item" id="email" type="text" name="Email" ftype="email" maxlength="120" placeholder="Correo">-->
+                    <!--    <select class="requerido input__item" id="degree-study" name="LEADCF14" required="">-->
+                    <!--    <option value="" disabled="" selected="">- Grado -</option>-->
+                    <!--    <option value="994950000">3ro. de secundaria</option>-->
+                    <!--    <option value="994950001">4to. de secundaria</option>-->
+                    <!--    <option value="994950002">5to. de secundaria</option>-->
+                    <!--    <option value="994950003">Egresado de Colegio</option>-->
+                    <!--    <option value="994950004">Estudiando en Instituto</option>-->
+                    <!--    <option value="994950005">Estudiando en Universidad</option>-->
+                    <!--    <option value="994950006">Egresado de Instituto</option>-->
+                    <!--    <option value="994950007">Egresado de Universidad</option>-->
+                    <!--  </select>-->
+                    <!--</div>-->
+                    <!--<div class="input__duo trio">-->
+                    <!--  <input class="requerido input__item" id="phone" type="text" placeholder="Celular*" name="Mobile" maxlength="9" pattern="9[0-9]{8}" required="">-->
+                    <!--  <input class="requerido input__item" id="phone2" type="text" placeholder="Whatsapp*" name="LEADCF210" maxlength="9" pattern="9[0-9]{8}">-->
+                    <!--  <input class="requerido input__item" id="number-document" type="text" name="LEADCF21" maxlength="8" placeholder="DNI N°">-->
+                    <!--</div>-->
+                    <!--<div class="terminos">-->
+                    <!--  <input id="tutor" type="checkbox" autocomplete="off" name="privacyTool">-->
+                    <!--  <label for="tutor" class="tutor">Datos del tutor, padre o madre</label>-->
+                    <!--</div>-->
+                    <!--<div class="input__duo trio tutores" style="display:none;">-->
+                    <!--    <input class="requerido input__item input__tutor" id="LEADCF211" type="text" placeholder="Nombre del padre, madre o apoderado" name="LEADCF211" maxlength="50">-->
+                    <!--    <input class="requerido input__item input__tutor" id="LEADCF213" type="text" placeholder="Celular del padre, madre o apoderado" name="LEADCF213" maxlength="9" pattern="9[0-9]{8}">-->
+                    <!--    <input class="requerido input__item input__tutor" id="LEADCF212" type="text" placeholder="Correo del padre, madre o apoderado" name="LEADCF212" maxlength="50">-->
+                    <!--</div>-->
+                    <!--<div class="input__duo"> -->
+                    <!--  <select class="requerido input__item" id="LEADCF3" name="LEADCF3">-->
+                    <!--    <option value="" disabled="" selected="">Modalidad de Interés</option>-->
+                    <!--    <option value="4fcc0775-eef9-ef11-bae3-002248383b9f">Factor Quinto</option>-->
+                    <!--    <option value="41cc0775-eef9-ef11-bae3-002248383b9f">Factor excelencia</option>-->
+                    <!--    <option value="5dcc0775-eef9-ef11-bae3-002248383b9f">IEA</option>-->
+                    <!--    <option value="35cc0775-eef9-ef11-bae3-002248383b9f">Examen general de admisión</option>-->
+                    <!--    <option value="47cc0775-eef9-ef11-bae3-002248383b9f">Pre Cayetano</option>-->
+                    <!--  </select>-->
+                    <!--  <select class="requerido input__item" id="LEADCF33" name="LEADCF33" required="">-->
+                    <!--    <option value="" disabled="" selected="">Nivel de interés</option>-->
+                    <!--    <option value="si">Sí</option>-->
+                    <!--    <option value="evaluando">Evaluando</option>-->
+                    <!--    <option value="no">No</option>-->
+                    <!--  </select>-->
+                    <!--</div>-->
+                    <!--<div class="input__duo trio">-->
+                    <!--    <select class="requerido input__item" id="career">-->
+                    <!--        <option value="" disabled="" selected="">Selecciona 1ra carrera</option>-->
+                    <!--        <option value="2a6372f8-161f-f011-998b-002248383b9f">Administración</option>-->
+                    <!--        <option value="2c6372f8-161f-f011-998b-002248383b9f">Administración en Salud</option>-->
+                    <!--        <option value="006372f8-161f-f011-998b-002248383b9f">Biología</option>-->
+                    <!--        <option value="146372f8-161f-f011-998b-002248383b9f">Educación</option>-->
+                    <!--        <option value="166372f8-161f-f011-998b-002248383b9f">Enfermería</option>-->
+                    <!--        <option value="186372f8-161f-f011-998b-002248383b9f">Estomatología</option>-->
+                    <!--        <option value="026372f8-161f-f011-998b-002248383b9f">Farmacia y Bioquimica</option>-->
+                    <!--        <option value="5edd571c-fa3f-f011-877a-6045bd3c8409">Gestión de Desarrollo Global</option>-->
+                    <!--        <option value="066372f8-161f-f011-998b-002248383b9f">Ingeniería Ambiental</option>-->
+                    <!--        <option value="086372f8-161f-f011-998b-002248383b9f">Ingeniería Biomédica</option>-->
+                    <!--        <option value="0a6372f8-161f-f011-998b-002248383b9f">Ingeniería Industrial</option>-->
+                    <!--        <option value="0e6372f8-161f-f011-998b-002248383b9f">Ingeniería Informática</option>-->
+                    <!--        <option value="1c6372f8-161f-f011-998b-002248383b9f">Laboratorio Clínico y Anatomía Patológica</option>-->
+                    <!--        <option value="1a6372f8-161f-f011-998b-002248383b9f">Medicina</option>-->
+                    <!--        <option value="2e6372f8-161f-f011-998b-002248383b9f">Medicina Veterinaria y Zootecnia</option>-->
+                    <!--        <option value="046372f8-161f-f011-998b-002248383b9f">Nutrición</option>-->
+                    <!--        <option value="266372f8-161f-f011-998b-002248383b9f">Psicología</option>-->
+                    <!--        <option value="1e6372f8-161f-f011-998b-002248383b9f">Radiología</option>-->
+                    <!--        <option value="226372f8-161f-f011-998b-002248383b9f">Terapia Física y Rehabilitación</option>-->
+                    <!--        <option value="246372f8-161f-f011-998b-002248383b9f">Terapia Ocupacional</option>-->
+                    <!--        <option value="206372f8-161f-f011-998b-002248383b9f">Terapia de Lenguaje</option>-->
+                    <!--    </select>-->
+                    <!--    <select class="requerido input__item" id="career2">-->
+                    <!--        <option value="" disabled="" selected="">Selecciona 2da carrera</option>-->
+                    <!--        <option value="2a6372f8-161f-f011-998b-002248383b9f">Administración</option>-->
+                    <!--        <option value="2c6372f8-161f-f011-998b-002248383b9f">Administración en Salud</option>-->
+                    <!--        <option value="006372f8-161f-f011-998b-002248383b9f">Biología</option>-->
+                    <!--        <option value="146372f8-161f-f011-998b-002248383b9f">Educación</option>-->
+                    <!--        <option value="166372f8-161f-f011-998b-002248383b9f">Enfermería</option>-->
+                    <!--        <option value="186372f8-161f-f011-998b-002248383b9f">Estomatología</option>-->
+                    <!--        <option value="026372f8-161f-f011-998b-002248383b9f">Farmacia y Bioquimica</option>-->
+                    <!--        <option value="5edd571c-fa3f-f011-877a-6045bd3c8409">Gestión de Desarrollo Global</option>-->
+                    <!--        <option value="066372f8-161f-f011-998b-002248383b9f">Ingeniería Ambiental</option>-->
+                    <!--        <option value="086372f8-161f-f011-998b-002248383b9f">Ingeniería Biomédica</option>-->
+                    <!--        <option value="0a6372f8-161f-f011-998b-002248383b9f">Ingeniería Industrial</option>-->
+                    <!--        <option value="0e6372f8-161f-f011-998b-002248383b9f">Ingeniería Informática</option>-->
+                    <!--        <option value="1c6372f8-161f-f011-998b-002248383b9f">Laboratorio Clínico y Anatomía Patológica</option>-->
+                    <!--        <option value="1a6372f8-161f-f011-998b-002248383b9f">Medicina</option>-->
+                    <!--        <option value="2e6372f8-161f-f011-998b-002248383b9f">Medicina Veterinaria y Zootecnia</option>-->
+                    <!--        <option value="046372f8-161f-f011-998b-002248383b9f">Nutrición</option>-->
+                    <!--        <option value="266372f8-161f-f011-998b-002248383b9f">Psicología</option>-->
+                    <!--        <option value="1e6372f8-161f-f011-998b-002248383b9f">Radiología</option>-->
+                    <!--        <option value="226372f8-161f-f011-998b-002248383b9f">Terapia Física y Rehabilitación</option>-->
+                    <!--        <option value="246372f8-161f-f011-998b-002248383b9f">Terapia Ocupacional</option>-->
+                    <!--        <option value="206372f8-161f-f011-998b-002248383b9f">Terapia de Lenguaje</option>-->
+                    <!--    </select>-->
+                    <!--    <select class="requerido input__item" id="career3">-->
+                    <!--        <option value="" disabled="" selected="">Selecciona 3ra carrera</option>-->
+                    <!--        <option value="2a6372f8-161f-f011-998b-002248383b9f">Administración</option>-->
+                    <!--        <option value="2c6372f8-161f-f011-998b-002248383b9f">Administración en Salud</option>-->
+                    <!--        <option value="006372f8-161f-f011-998b-002248383b9f">Biología</option>-->
+                    <!--        <option value="146372f8-161f-f011-998b-002248383b9f">Educación</option>-->
+                    <!--        <option value="166372f8-161f-f011-998b-002248383b9f">Enfermería</option>-->
+                    <!--        <option value="186372f8-161f-f011-998b-002248383b9f">Estomatología</option>-->
+                    <!--        <option value="026372f8-161f-f011-998b-002248383b9f">Farmacia y Bioquimica</option>-->
+                    <!--        <option value="5edd571c-fa3f-f011-877a-6045bd3c8409">Gestión de Desarrollo Global</option>-->
+                    <!--        <option value="066372f8-161f-f011-998b-002248383b9f">Ingeniería Ambiental</option>-->
+                    <!--        <option value="086372f8-161f-f011-998b-002248383b9f">Ingeniería Biomédica</option>-->
+                    <!--        <option value="0a6372f8-161f-f011-998b-002248383b9f">Ingeniería Industrial</option>-->
+                    <!--        <option value="0e6372f8-161f-f011-998b-002248383b9f">Ingeniería Informática</option>-->
+                    <!--        <option value="1c6372f8-161f-f011-998b-002248383b9f">Laboratorio Clínico y Anatomía Patológica</option>-->
+                    <!--        <option value="1a6372f8-161f-f011-998b-002248383b9f">Medicina</option>-->
+                    <!--        <option value="2e6372f8-161f-f011-998b-002248383b9f">Medicina Veterinaria y Zootecnia</option>-->
+                    <!--        <option value="046372f8-161f-f011-998b-002248383b9f">Nutrición</option>-->
+                    <!--        <option value="266372f8-161f-f011-998b-002248383b9f">Psicología</option>-->
+                    <!--        <option value="1e6372f8-161f-f011-998b-002248383b9f">Radiología</option>-->
+                    <!--        <option value="226372f8-161f-f011-998b-002248383b9f">Terapia Física y Rehabilitación</option>-->
+                    <!--        <option value="246372f8-161f-f011-998b-002248383b9f">Terapia Ocupacional</option>-->
+                    <!--        <option value="206372f8-161f-f011-998b-002248383b9f">Terapia de Lenguaje</option>-->
+                    <!--    </select>-->
+                    <!--</div>-->
+                    <!--<input class="requerido input__item" name="LEADCF35" type="text" placeholder="Otra Carrera" id="LEADCF35">-->
+                    <!--<div class="oculto">-->
+                    <!--  <input class="UTM" id="utm_source" name="LEADCF183" value="">-->
+                    <!--  <input class="UTM" id="utm_medium" name="LEADCF189" value="prospeccion">-->
+                    <!--  <input class="UTM" id="utm_campaign" name="LEADCF24" value="pregrado-2026-01">-->
+                    <!--  <input class="UTM" id="utm_id" name="LEADCF203" value="digital">-->
+                    <!--  <input class="UTM" id="utm_term" name="LEADCF184" value="">-->
+                    <!--  <input class="UTM" id="utm_content" name="LEADCF182" value="">-->
+                    <!--  <input id="reference" name="LEADCF168" value="">-->
+                    <!--  <input id="LEADCF185" name="LEADCF185" value="PREGRADO">-->
+                    <!--  <input name="Lead Status" value="Sin gestión">-->
+                    <!--  <input name="LEADCF1" value="Automáticos">-->
+                    <!--  <input name="LEADCF198" value="Postulante">-->
+                    <!--  <input name="Lead Source" value="Colegios">-->
+                    <!--  <input id="LEADCF22" name="LEADCF22" value="">-->
+                    <!--  <input id="LEADCF194" name="LEADCF194" value="">-->
+                    <!--  <input id="LEADCF10" name="LEADCF10" value="2026-1">-->
+                    <!--  <input id="LEADCF7" name="LEADCF7" value="Pregrado OPG">-->
+                    <!--  <input id="LEADCF220" name="LEADCF302" value="">-->
+                    <!--  <input id="LEADCF206" name="LEADCF206" value="">-->
+                    <!--  <input id="LEADCF36" name="LEADCF36" value="">-->
+                    <!--  <input id="modalidad" name="modalidad" value="ea5d3933-e6f9-ef11-bae3-002248383b9f"> -->
+                    <!--  <input class="" id="LEADCF34" name="LEADCF34" value="Si asecto">-->
+                    <!--</div>-->
+                    <!--<div class="terminos">-->
+                    <!--    <input type="checkbox" required />-->
+                    <!--    <h3 id="labelCheckbox">-->
+                    <!--        Declaro haber leído y acepto la-->
+                    <!--        <a href="https://cayetano.edu.pe/politica-privacidad/" target="_blank" style="text-decoration: underline; font-size:1.4rem;"> Política de Privacidad-->
+                    <!--        </a>, y autorizo a la Cayetano, conforme a lo establecido <span id="pop" style="text-decoration:underline;cursor:pointer;">aquí</span>, el tratamiento de mis datos personales.-->
+                    <!--    </h3>-->
+                    <!--</div>-->
+                    <!--<div class="formulario__bottom">-->
+                    <!--    <button class="form__button" type="submit">-->
+                    <!--      <h3>Registrar lead en CRM</h3>-->
+                    <!--    </button>-->
+                    <!--</div>-->
+                </form>
+
+                <script>
+
+                    let refSocial = document.getElementById('reference');
+                    let urlSocial = window.location.href;
+                    refSocial.value = urlSocial;
+
+                    let inputCategoria = document.getElementById('LEADCF206');
+                    let inputDistrito = document.getElementById('LEADCF36');
+                    let inputSource = document.getElementById('utm_source');
+                    let inputContent = document.getElementById('utm_content');
+                    let inputDisabledColegio = document.getElementById('disabled-colegio')
+                    let inputDisabledDistritoColegio = document.getElementById('disabled-distrito-colegio')
+
+                    let actividad = document.getElementById('LEADCF209');
+                    let promotor = document.getElementById('LEADCF13');
+
+                    // GENERAL 
+                    const categoryProduct = document.getElementById("LEADCF209");
+                    const formContainers = document.querySelectorAll(".form__content");
+
+                    // desactiva todos los contenedores de los formularios
+                    formContainers.forEach(ct => ct.style.display = 'none');
+
+                    // seleccionador de producto
+                    categoryProduct.addEventListener("change", () => {
+                        const selectCategory = categoryProduct.value;
+                        formContainers.forEach(ct => ct.style.display = 'none');
+                        const activeContainer = document.getElementById(`${selectCategory}__formulario--content`);
+                        if (activeContainer) {
+                            activeContainer.style.display = 'grid';
+                        }
+                    })
+
+                    //funcion generica de envio de datos
+                    const sendDataToAPI = async (url, data) => {
+
+                        try {
+
+                            const response = await fetch(url, {
+                                method: "POST",
+                                headers: {
+                                    'Content-Type': "application/json",
+                                    'Accept': "application/json"
+                                },
+                                body: JSON.stringify(data)
+                            });
+
+                            const text = await response.text();
+
+                            if (!response.ok) {
+                                throw new Error(`HTTP error! status: ${response.status}. Response: ${text}`)
+                            }
+
+                            const jsonResponse = JSON.parse(text);
+                            if (jsonResponse.crmResponse && jsonResponse.crmResponse.IsSuccess) {
+                                console.log("Exito: ", jsonResponse);
+                                return jsonResponse;
+                            } else {
+                                console.error("Error en la respuesta del CRM:", jsonResponse);
+                                throw new Error("Error en la lógica del CRM");
+                            }
+
+                        } catch (error) {
+
+                            console.error("Error de envío:", error);
+                            throw error;
+
+                        }
+
+                    }
+
+                    // Envios Pregrado
+                    const handlePregradoSubmit = async (ev) => {
+
+                        ev.preventDefault();
+                        const button = ev.target.querySelector(".form__button");
+                        button.disabled = true;
+
+                        let pms = document.getElementById("LEADCF13").value;
+                        let pmContent = '';
+                        switch (pms) {
+                            case '1ab07ab0-d756-f011-bec2-6045bd3a2cb5':
+                                pmContent = 'valerin-alburquerque';
+                                break;
+                            case 'a66076a4-d756-f011-bec2-6045bd3a2cb5':
+                                pmContent = 'robert-chavez';
+                                break;
+                            case '42a76d98-d756-f011-bec2-6045bd3a2cb5':
+                                pmContent = 'jean-paul-carillo';
+                                break;
+                            case '1834c4b6-d756-f011-bec2-6045bd3a2cb5':
+                                pmContent = 'dana-lizarme';
+                                break;
+                            case 'fde17d9e-d756-f011-bec2-6045bd3a2cb5':
+                                pmContent = 'kemerly-isla';
+                                break;
+                            case '4a8a6492-d756-f011-bec2-6045bd3a2cb5':
+                                pmContent = 'flavia-de-la-cruz';
+                                break;
+                            case '1bc7698c-d756-f011-bec2-6045bd3a2cb5':
+                                pmContent = 'eva-esquivel';
+                                break;
+                            case 'bb72bc7f-d756-f011-bec2-6045bd3a2cb5':
+                                pmContent = 'clara-trelles'
+                                break;
+                            default:
+                                break;
+                        }
+
+                        const InstitucionEducativa = document.getElementById("LEADCF204").value;
+                        const Promotor = document.getElementById("LEADCF13").value;
+                        // const TipoActividad = document.getElementById("LEADCF209").value;
+                        const FechaEvento = document.getElementById("LEADCF208").value;
+                        const PrimerNombre = document.getElementById("name").value;
+                        const ApellidoPaterno = document.getElementById("lastname").value;
+                        const ApellidoMaterno = document.getElementById("second_lastname").value;
+                        const NroDocumento = document.getElementById("number-document").value === "" ? `T${document.getElementById("phone").value}` : document.getElementById("number-document").value;
+                        const Correo = document.getElementById("email").value === "" ? `${document.getElementById("phone").value}@temporal.com` : document.getElementById("email").value;
+                        const GradoEstudio = Number(document.getElementById("degree-study").value);
+                        const TipoDocumento = 994950000;
+                        const CodigoPais = "+51";
+                        const Programa = document.getElementById("career").value;
+                        const UtmCampaign = document.getElementById("utm_campaign").value;
+                        const UtmTerm = document.getElementById("utm_term").value;
+                        const UtmSource = document.getElementById("LEADCF209").value;
+                        const UtmMedium = document.getElementById("utm_medium").value;
+                        const UtmId = document.getElementById("utm_id").value;
+                        const UtmContent = pmContent;
+                        const Celular = document.getElementById("phone").value;
+                        const Celular2 = document.getElementById("phone2").value;
+                        const NivelInteres = document.getElementById("LEADCF33").value;
+                        const Origen = 8;
+                        const ConsentimientoPoliticaPrivacidad = true;
+                        const AutorizoTratamientoDatos = true;
+                        // const ModalidadIngreso = "ea5d3933-e6f9-ef11-bae3-002248383b9f";
+                        const SubModalidadIngreso = document.getElementById("LEADCF3").value;
+                        const Periodo = "a53d1c25-cd2f-f011-8c4e-000d3ac087da";
+                        const Fuente = "d57a50c5-5ef5-ef11-be21-000d3ac1f096";
+                        // const Fuente = "cf7a50c5-5ef5-ef11-be21-000d3ac1f096";
+                        const UrlReferencia = document.getElementById("reference").value;
+                        const ModalidadIngreso = "ea5d3933-e6f9-ef11-bae3-002248383b9f";
+                        const CodigoPaisApoderado = document.getElementById("LEADCF213").value === "" ? "" : "+51";
+                        const NombreApoderado = document.getElementById("LEADCF211") ? document.getElementById("LEADCF211").value : "";
+                        const CelularApoderado = document.getElementById("LEADCF213") ? document.getElementById("LEADCF213").value : "";
+                        const CorreoApoderado = document.getElementById("LEADCF212") ? document.getElementById("LEADCF212").value : "";
+                        const OtraCarrera = document.getElementById("LEADCF35").value;
+                        const Carrera2 = document.getElementById("career2").value ? document.getElementById("career2").value : "";
+                        const Carrera3 = document.getElementById("career3").value ? document.getElementById("career3").value : "";
+
+
+                        const datos = {
+                            InstitucionEducativa,
+                            Promotor,
+                            // TipoActividad,
+                            FechaEvento,
+                            Celular2,
+                            NivelInteres,
+                            PrimerNombre,
+                            ApellidoPaterno,
+                            ApellidoMaterno,
+                            TipoDocumento,
+                            NroDocumento,
+                            Correo,
+                            GradoEstudio,
+                            Programa,
+                            UtmCampaign,
+                            UtmTerm,
+                            UtmSource,
+                            UtmMedium,
+                            UtmId,
+                            UtmContent,
+                            Celular,
+                            Origen,
+                            CodigoPais,
+                            ConsentimientoPoliticaPrivacidad,
+                            AutorizoTratamientoDatos,
+                            Periodo,
+                            Fuente,
+                            UrlReferencia,
+                            ModalidadIngreso,
+                            SubModalidadIngreso,
+                            CodigoPaisApoderado,
+                            NombreApoderado,
+                            CelularApoderado,
+                            CorreoApoderado,
+                            OtraCarrera,
+                            Carrera2,
+                            Carrera3
+                        }
+
+                        try {
+                            await sendDataToAPI('https://cayetano.edu.pe/s/cxcrm/cxcrm_pregrado.php', datos);
+                            window.location.href = "https://lp.cayetano.edu.pe/promotoria-final/";
+                        } catch (error) {
+                            alert("Hubo un error al registrar el lead de pregrado. Por favor intentalo de nuevo")
+                            button.disabled = false;
+                        }
+
+                    }
+
+                    //asignar el eventlistener a cada formulario
+                    document.getElementById("pregrado__formulario--content").addEventListener("submit", handlePregradoSubmit);
+
+                </script>
+            </div>
+        </div>
+    </div>
+    <script>
+        let pop = document.getElementById('pop');
+        let popup = document.getElementById('popup');
+        pop.addEventListener("click", () => {
+            popup.style.display = "flex";
+        })
+        let cerrarPopup = document.getElementById('cerrarPop');
+        cerrarPopup.addEventListener("click", () => {
+            popup.style.display = "none";
+        })
+    </script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

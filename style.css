@@ -1,0 +1,516 @@
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0
+}
+
+main {
+    display: block
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible
+}
+
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+a {
+    background-color: rgba(0, 0, 0, 0)
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted
+}
+
+b,
+strong {
+    font-weight: bolder
+}
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+small {
+    font-size: 80%
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+sub {
+    bottom: -0.25em
+}
+
+sup {
+    top: -0.5em
+}
+
+img {
+    border-style: none
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0
+}
+
+button,
+input {
+    overflow: visible
+}
+
+button,
+select {
+    text-transform: none
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+    -webkit-appearance: button
+}
+
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+    border-style: none;
+    padding: 0
+}
+
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+    outline: 1px dotted ButtonText
+}
+
+fieldset {
+    padding: .35em .75em .625em
+}
+
+legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal
+}
+
+progress {
+    vertical-align: baseline
+}
+
+textarea {
+    overflow: auto
+}
+
+[type=checkbox],
+[type=radio] {
+    box-sizing: border-box;
+    padding: 0
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+    height: auto
+}
+
+[type=search] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px
+}
+
+[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit
+}
+
+details {
+    display: block
+}
+
+summary {
+    display: list-item
+}
+
+template {
+    display: none
+}
+
+[hidden] {
+    display: none
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit
+}
+
+body {
+    font-family: "workSans-Regular";
+    position: relative
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+input,
+select,
+ul,
+li,
+label,
+p,
+div {
+    font-family: "Poppins", sans-serif
+}
+
+.global__container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    overflow: hidden;
+    background-image: url("https://upch-repo-comercial.s3.dualstack.us-east-1.amazonaws.com/17-03-25/bg-promo-1703.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: none
+}
+
+.global__container .container__form {
+    top: 0;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding: 3rem 0
+}
+
+.formulario {
+    background-color: #edf7fd;
+    border-radius: 1rem;
+    height: auto;
+    width: 30rem;
+    display: grid;
+    padding: 2rem 1rem;
+    overflow: hidden;
+    row-gap: 1rem
+}
+
+.input__duo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -webkit-column-gap: 3%;
+    -moz-column-gap: 3%;
+    column-gap: 3%;
+    max-width: 28rem
+}
+
+.input__duo input,
+.input__duo select {
+    color: #000;
+    font-size: 1.3rem;
+    height: 90%;
+    width: 100%
+}
+
+.terminos {
+    display: grid;
+    grid-template-columns: 5% 95%
+}
+
+.terminos input {
+    color: #000
+}
+
+.terminos label {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: .7rem;
+    font-size: 1.1rem;
+    font-family: "Work Sans", sans-serif
+}
+
+.terminos a {
+    color: #000
+}
+
+.formulario__bottom {
+    display: grid;
+    padding-top: .5rem
+}
+
+.formulario__bottom .form__button {
+    border-radius: 1rem;
+    border: 1px solid #000;
+    background-color: #ffca20;
+    height: 4rem;
+    cursor: pointer
+}
+
+.formulario__bottom .form__button h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7rem;
+    margin: 0;
+    color: #000
+}
+
+.logo__container {
+    display: grid
+}
+
+.upch_logo {
+    width: 20rem !important;
+    height: auto;
+    z-index: 10 !important
+}
+
+.checkbox__item--grid {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    align-items: center;
+    padding: 0 1.5rem
+}
+
+#disabled-colegio,
+#disabled-distrito-colegio {
+    background-color: #c1c5c9;
+}
+
+.input__item {
+    border-radius: .5rem;
+    border: .2px solid #000;
+    height: 3.5rem;
+    background-color: rgba(0, 0, 0, 0);
+    padding-left: .6rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: #000;
+    max-width: 42.5rem;
+}
+
+#top {
+    position: relative;
+}
+
+.terminos {
+    column-gap: 1rem;
+}
+
+#popup {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#popup h3,
+#popup p {
+    color: black !important;
+    padding: 0;
+    margin: 0;
+}
+
+#popup p {
+    font-size: 1.2rem;
+}
+
+.ctnPopup {
+    position: relative;
+    padding: 4rem 5.5rem;
+    width: 70rem;
+    max-height: 90%;
+    overflow-y: auto;
+    max-width: 90%;
+    background-color: white;
+    box-sizing: border-box;
+    height: auto;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: end;
+    gap: 1.5rem;
+    box-shadow: 0 0 1rem gray;
+}
+
+.ctnCerrar {
+    height: 0;
+    position: sticky;
+    width: 100%;
+    top: 0;
+}
+
+.ctnPopup .cerrarPop {
+    position: absolute;
+    top: -2rem;
+    right: -3.5rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 3.5rem;
+    width: 3.5rem;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    border: 1px solid gray;
+    cursor: pointer;
+    font-weight: 600;
+    background: gray;
+    color: white;
+}
+
+#carrerasSeleccionadas {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+.formulario {
+    width: 50rem !important;
+}
+
+.input__duo {
+    width: 100% !important;
+    max-width: 100% !important;
+    column-gap: 1.5% !important;
+}
+
+.formulario__content {
+    max-width: 100% !important;
+}
+
+.input__item {
+    max-width: 100% !important;
+}
+
+.terminos {
+    grid-template-columns: 2% 96% !important;
+}
+
+.terminos label {
+    padding: 0 !important;
+}
+
+.terminos .tutor {
+    font-size: 1.3rem !important;
+}
+
+.form__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.form__content div {
+    min-height: 3.5rem;
+}
+
+.form__content div input,
+.form__content div select {
+    border-radius: .5rem;
+    height: 100%;
+}
+
+.content-departamento .content-desc {
+    display: none;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.content-desc h4 {
+    margin: 0;
+}
+
+.check-content {
+    display: flex;
+    column-gap: 4rem;
+    align-items: center;
+}
+
+.check-item {
+    display: flex;
+    align-items: center;
+    column-gap: .7rem;
+}
+
+.check-item label {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.padreContainer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.formulario__title {
+    width: 100%;
+    text-align: center;
+}
+
+.formulario__title h3 {
+    margin: 0;
+    font-size: 1.8rem;
+}
