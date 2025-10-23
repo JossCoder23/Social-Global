@@ -99,6 +99,162 @@
                     </div>
                     <input class="input__item" id="email" type="email" name="email" maxlength="100" required
                         autocomplete="off" placeholder="Correo*" />
+                    <select class="requerido input__item selectPrograma" id="type" required="">
+                        <option value="" disabled="" selected="">- Tipo de Programa -</option>
+                        <option value="pregrado">Pregrado OPG</option>
+                        <option value="pge">PGE</option>
+                        <option value="especialidades">Especialidades</option>
+                    </select>
+                    <select class="input__item tipo-especialidad" id="tipo-especialidad">
+                        <option value="" disabled="" selected="">- Tipo de Especialidad -</option>
+                        <option value="enf">Enfermería</option>
+                        <option value="est">Estomatología</option>
+                        <option value="vet">Veterinaria</option>
+                        <option value="tm">Tecnologías Médicas</option>
+                    </select>
+                    <!-- CAMPAINGS -->
+                    <select class="utm_pregrado input__item" id="utm_campaign" type="text" name="utm_campaign"
+                        required="">
+                        <option value="" disabled="" selected="">UTM Campaña</option>
+                        <option value="pregrado-2026-01">pregrado-2026-01</option>
+                        <option value="beca18-2026-01">beca18-2026-01</option>
+                    </select>
+
+                    <!-- CAMPAINGS -->
+                    <!-- PROGRAMAS -->
+                    <select class="input__item program programa-pregrado" id="programa-pregrado" name="career">
+                        <option value disabled selected>- Seleccionar carrera Pregrado -</option>
+                        <option value="f785f0ae-ec42-f011-877a-6045bd3c8409">Por definir</option>
+                        <option value="2a6372f8-161f-f011-998b-002248383b9f">Administración</option>
+                        <option value="2c6372f8-161f-f011-998b-002248383b9f">Administración en Salud</option>
+                        <option value="006372f8-161f-f011-998b-002248383b9f">Biología</option>
+                        <option value="146372f8-161f-f011-998b-002248383b9f">Educación</option>
+                        <option value="166372f8-161f-f011-998b-002248383b9f">Enfermería</option>
+                        <option value="186372f8-161f-f011-998b-002248383b9f">Estomatología</option>
+                        <option value="026372f8-161f-f011-998b-002248383b9f">Farmacia y Bioquimica</option>
+                        <option value="5edd571c-fa3f-f011-877a-6045bd3c8409">Gestión de Desarrollo Global
+                        </option>
+                        <option value="066372f8-161f-f011-998b-002248383b9f">Ingeniería Ambiental</option>
+                        <option value="086372f8-161f-f011-998b-002248383b9f">Ingeniería Biomédica</option>
+                        <option value="0a6372f8-161f-f011-998b-002248383b9f">Ingeniería Industrial</option>
+                        <option value="0e6372f8-161f-f011-998b-002248383b9f">Ingeniería Informática</option>
+                        <option value="1c6372f8-161f-f011-998b-002248383b9f">Laboratorio Clínico y Anatomía
+                            Patológica</option>
+                        <option value="1a6372f8-161f-f011-998b-002248383b9f">Medicina</option>
+                        <option value="2e6372f8-161f-f011-998b-002248383b9f">Medicina Veterinaria y Zootecnia
+                        </option>
+                        <option value="046372f8-161f-f011-998b-002248383b9f">Nutrición</option>
+                        <option value="266372f8-161f-f011-998b-002248383b9f">Psicología</option>
+                        <option value="1e6372f8-161f-f011-998b-002248383b9f">Radiología</option>
+                        <option value="226372f8-161f-f011-998b-002248383b9f">Terapia Física y Rehabilitación
+                        </option>
+                        <option value="246372f8-161f-f011-998b-002248383b9f">Terapia Ocupacional</option>
+                        <option value="206372f8-161f-f011-998b-002248383b9f">Terapia de Lenguaje</option>
+                    </select>
+                    <select class="input__item program programa-pregrado-beca" id="programa-pregrado-beca"
+                        name="career">
+                        <option value disabled selected>- Seleccionar carrera Beca -</option>
+                        <option value="1997cf64-10ae-f011-bbd3-002248e03f9a">Por definir</option>
+                        <option value="0a4b6cd7-ccae-f011-bbd3-6045bd39235d">Administración</option>
+                        <option value="24024a49-fead-f011-bbd3-002248379852">Administración en Salud</option>
+                        <option value="26024a49-fead-f011-bbd3-002248379852">Biología</option>
+                        <option value="2c024a49-fead-f011-bbd3-002248379852">Educación</option>
+                        <option value="2e024a49-fead-f011-bbd3-002248379852">Educación Inicial Intercultural Bilingüe
+                        </option>
+                        <option value="30024a49-fead-f011-bbd3-002248379852">Educación Primaria Intercultural Bilingüe
+                        </option>
+                        <option value="32024a49-fead-f011-bbd3-002248379852">Enfermería</option>
+                        <option value="34024a49-fead-f011-bbd3-002248379852">Estomatología</option>
+                        <option value="36024a49-fead-f011-bbd3-002248379852">Farmacia y Bioquimica</option>
+                        <option value="38024a49-fead-f011-bbd3-002248379852">Gestión de Desarrollo Global</option>
+                        <option value="3a024a49-fead-f011-bbd3-002248379852">Ingeniería Ambiental</option>
+                        <option value="3c024a49-fead-f011-bbd3-002248379852">Ingeniería Biomédica</option>
+                        <option value="3e024a49-fead-f011-bbd3-002248379852">Ingeniería Industrial</option>
+                        <option value="42024a49-fead-f011-bbd3-002248379852">Ingeniería Informática</option>
+                        <option value="4e024a49-fead-f011-bbd3-002248379852">Laboratorio Clínico y Anatomía Patológica
+                        </option>
+                        <option value="44024a49-fead-f011-bbd3-002248379852">Medicina</option>
+                        <option value="46024a49-fead-f011-bbd3-002248379852">Medicina Veterinaria y Zootecnia</option>
+                        <option value="48024a49-fead-f011-bbd3-002248379852">Nutrición</option>
+                        <option value="4a024a49-fead-f011-bbd3-002248379852">Psicología</option>
+                        <option value="50024a49-fead-f011-bbd3-002248379852">Radiología</option>
+                        <option value="54024a49-fead-f011-bbd3-002248379852">Terapia Física y Rehabilitación</option>
+                        <option value="56024a49-fead-f011-bbd3-002248379852">Terapia Ocupacional</option>
+                        <option value="52024a49-fead-f011-bbd3-002248379852">Terapia de Lenguaje</option>
+                    </select>
+                    <select class="input__item program programa-pge" id="programa-pge" name="career">
+                        <option value disabled selected>- Seleccionar carrera PGE -</option>
+                        <option value="3244b0e3-caad-f011-bbd3-6045bd3c84a3">Por definir</option>
+                        <option value="fc6272f8-161f-f011-998b-002248383b9f">Enfermería</option>
+                        <option value="fe6272f8-161f-f011-998b-002248383b9f">Psicología</option>
+                        <option value="fa6272f8-161f-f011-998b-002248383b9f">Educación</option>
+                    </select>
+                    <!-- PROGRAMA ESPECIALIDADES -->
+                    <select class="input__item program programa-esp-enf" id="programa-esp" name="career">
+                        <option value disabled selected>- Seleccionar Especialidad Enfermería -</option>
+                        <option value="2f43450a-cbad-f011-bbd3-6045bd3c84a3">Por definir</option>
+                        <option value="de6272f8-161f-f011-998b-002248383b9f">Centro Quirúrgico Especializado</option>
+                        <option value="e06272f8-161f-f011-998b-002248383b9f">Cuidados Intensivos Neonatales</option>
+                        <option value="e26272f8-161f-f011-998b-002248383b9f">Cuidados Nefrológicos</option>
+                        <option value="e46272f8-161f-f011-998b-002248383b9f">Emergencias y Desastres</option>
+                    </select>
+                    <select class="input__item program programa-esp-est" id="programa-esp" name="career">
+                        <option value disabled selected>- Seleccionar Especialidad Estomatología -</option>
+                        <option value="2f43450a-cbad-f011-bbd3-6045bd3c84a3">Por definir</option>
+                        <option value="ea6272f8-161f-f011-998b-002248383b9f">Estomatología de Pacientes Especiales
+                        </option>
+                        <option value="f26272f8-161f-f011-998b-002248383b9f">Radiología Bucal y Maxilofacial</option>
+                        <option value="e86272f8-161f-f011-998b-002248383b9f">Cirugía Bucal y Maxilofacial</option>
+                        <option value="f06272f8-161f-f011-998b-002248383b9f">Periodoncia e Implantología</option>
+                        <option value="f46272f8-161f-f011-998b-002248383b9f">Rehabilitación Oral</option>
+                        <option value="e66272f8-161f-f011-998b-002248383b9f">Odontología Restauradora y Estética
+                        </option>
+                        <option value="ee6272f8-161f-f011-998b-002248383b9f">Ortodoncia y Ortopedia Maxilar</option>
+                    </select>
+                    <select class="input__item program programa-esp-tm" id="programa-esp" name="career">
+                        <option value disabled selected>- Seleccionar Especialidad Tecnologías Médica -</option>
+                        <option value="2f43450a-cbad-f011-bbd3-6045bd3c84a3">Por definir</option>
+                        <option value="67569884-58a8-f011-bbd3-6045bd3c84a3">Terapia Ocupacional en Pediatría</option>
+                        <option value="ee930ede-58a8-f011-bbd3-6045bd3c84a3">Terapia Ocupacional en Neurorrehabilitación
+                        </option>
+                        <option value="ac889dfd-58a8-f011-bbd3-6045bd3c84a3">Fisioterapia en Ortopedia y Traumatología
+                        </option>
+                        <option value="f827891d-59a8-f011-bbd3-6045bd3c84a3">Biomecánica y Podología</option>
+                    </select>
+                    <select class="input__item program programa-esp-vet" id="programa-esp" name="career">
+                        <option value disabled selected>- Seleccionar Especialidad Veterinaria -</option>
+                        <option value="2f43450a-cbad-f011-bbd3-6045bd3c84a3">Por definir</option>
+                        <option value="f86272f8-161f-f011-998b-002248383b9f">Medicina de Animales de Compañía</option>
+                    </select>
+                    <!-- FIN PROGRAMA ESPECIALIDADES -->
+                    <select class="utm_esp input__item" id="utm_campaign" type="text" name="utm_campaign" required="">
+                        <option value="" disabled="" selected="">UTM Campaña</option>
+                        <option value="se-faenf-2026-01">se-faenf-2026-01</option>
+                        <option value="se-faest-2025-02">se-faest-2025-02</option>
+                        <option value="se-tm-2026-01">se-tm-2026-01</option>
+                        <option value="se-favez-2025-02">se-favez-2025-02</option>
+                    </select>
+                    <!-- PROGRAMAS -->
+                    <select class="utm_pge input__item" id="utm_campaign" type="text" name="utm_campaign" required="">
+                        <option value="" disabled="" selected="">UTM Campaña</option>
+                        <option value="pge-2026-01">pge-2026-01</option>
+                    </select>
+                    <select class="input__item degree-study-pre" id="degree-study" name="degree-study-pre">
+                        <option value="" disabled selected>¿En qué grado se encuentra?</option>
+                    </select>
+                    <select class="input__item degree-study-pos" id="degree-study-pos" name="degree-study-pos">
+                        <option value="" disabled selected>¿En qué grado se encuentra?</option>
+                    </select>
+                    <select class="requerido input__item" id="utm_source" name="utm_source" required="">
+                        <option value="" disabled="" selected="">UTM Source</option>
+                        <option value="Facebook">Facebook</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="Tiktok">Tiktok</option>
+                        <option value="Youtube">Youtube</option>
+                        <option value="Linkedin">Linkedin</option>
+                        <option value="Whatsapp">Whatsapp</option>
+                    </select>
+                    <!-- SELECCIONABLES PADRE Y DESCENTRALIZADO -->
                     <div class="check-content">
                         <div class="check-item padres">
                             <input id="data-padre" name="check" type="checkbox">
@@ -133,45 +289,7 @@
                                 placeholder="Celular Padre">
                         </div>
                     </div>
-                    <select class="requerido input__item selectPrograma" id="type" required="">
-                        <option value="" disabled="" selected="">- Tipo de Programa -</option>
-                        <option value="pregrado">Pregrado OPG</option>
-                        <option value="pge">PGE</option>
-                        <option value="especialidades">Especialidades</option>
-                    </select>
-                    <select class="input__item" id="tipo-especialidad">
-                        <option value="" disabled="" selected="">- Tipo de Especialidad -</option>
-                        <option value="enf">Enfermería</option>
-                        <option value="est">Estomatología</option>
-                        <option value="vet">Veterinaria</option>
-                        <option value="tm">Tecnologías Médicas</option>
-                    </select>
-
-                    <select class="input__item" id="career" name="career" required>
-                        <option value disabled selected>- Seleccionar carrera -</option>
-                    </select>
-
-                    <select class="input__item" id="degree-study" name="degree-study">
-                        <option value="" disabled selected>¿En qué grado se encuentra?</option>
-                    </select>
-
-                    <select class="input__item" id="degree-study-pos" name="degree-study-pos">
-                        <option value="" disabled selected>¿En qué grado se encuentra?</option>
-                    </select>
-
-                    <select class="UTM input__item" id="utm_campaign" type="text" name="utm_campaign" required="">
-                        <option value="" disabled="" selected="">UTM Campa&ntilde;a</option>
-                    </select>
-
-                    <select class="requerido input__item" id="utm_source" name="utm_source" required="">
-                        <option value="" disabled="" selected="">UTM Source</option>
-                        <option value="Facebook">Facebook</option>
-                        <option value="Instagram">Instagram</option>
-                        <option value="Tiktok">Tiktok</option>
-                        <option value="Youtube">Youtube</option>
-                        <option value="Linkedin">Linkedin</option>
-                        <option value="Whatsapp">Whatsapp</option>
-                    </select>
+                    <!-- SELECCIONABLES PADRE Y DESCENTRALIZADO -->
                     <div class="oculto">
                         <!-- <input class="UTM" id="utm_source" name="LEADCF183" value="social">  utm_content-->
                         <input class="UTM" id="utm_medium" name="LEADCF189" value="social">
@@ -210,8 +328,8 @@
                         <h3 id="labelCheckbox">
                             Declaro haber leído y acepto la
                             <a href="https://cayetano.edu.pe/politica-privacidad/" target="_blank"
-                                style="text-decoration: underline; font-size:1.4rem;"> Política de Privacidad
-                            </a>, y autorizo a la Cayetano, conforme a lo establecido <span id="pop"
+                                style="text-decoration: underline; font-size:1.4rem;"> Política de Privacidad</a>, y
+                            autorizo a la Cayetano, conforme a lo establecido <span id="pop"
                                 style="text-decoration:underline;cursor:pointer;">aquí</span>, el tratamiento de mis
                             datos personales.
                         </h3>
@@ -621,6 +739,148 @@
 
                 <script>
 
+                    // CHECK PADRE Y DESCENTRALIZADO 
+                    let checkPadre = document.getElementById("data-padre");
+                    let checkDesc = document.getElementById("data-desc");
+                    let padreContent = document.querySelector(".padreContainer");
+                    let departamentoCt = document.querySelector(".content-departamento");
+                    let nombrePadre = document.getElementById('nombre_padre');
+                    let lastPadre = document.getElementById('last_padre');
+                    let correoPadre = document.getElementById('correo_padre');
+                    let movilPadre = document.getElementById('movil_padre');
+                    let term = document.getElementById('utm_term');
+
+                    checkPadre.addEventListener("click", () => {
+                        if (checkPadre.checked) {
+                            padreContent.style.display = "flex";
+                            term.value = "padres";
+                            checkDesc.checked = false;
+                            departamentoCt.style.display = "none";
+                            document.getElementById("modular").removeAttribute("required");
+                        } else {
+                            padreContent.style.display = "none";
+                        }
+                    })
+
+                    checkDesc.addEventListener("click", () => {
+                        if (checkDesc.checked) {
+                            // element.setAttribute("required", "");
+                            term.value = "descentralizado";
+                            checkPadre.checked = false;
+                            padreContent.style.display = "none";
+                            departamentoCt.style.display = "block";
+                            document.getElementById("modular").setAttribute("required", "");
+                        } else {
+                            departamentoCt.style.display = "none";
+                            document.getElementById("modular").removeAttribute("required");
+                        }
+                    })
+                    // CHECK PADRE Y DESCENTRALIZADO 
+
+                    // SELECT TIPO PROGRAMA
+                    let program = document.querySelector(".selectPrograma");
+                    let allUtms = document.querySelectorAll("#utm_campaign");
+                    let utmPregrado = document.querySelector(".utm_pregrado");
+                    let utmPge = document.querySelector(".utm_pge");
+                    let programPge = document.querySelector("#programa-pge");
+                    let utmEsp = document.querySelector(".utm_esp");
+
+                    program.addEventListener("change", () => {
+                        if (program.value === "pregrado") {
+                            allUtms.forEach(item => {
+                                item.style.display = "none";
+                                item.value = "";
+                            });
+                            allProgram.forEach(item => {
+                                item.style.display = "none";
+                                item.value = "";
+                            });
+                            utmPregrado.style.display = "block";
+                            document.getElementById("tipo-especialidad").style.display = "none";
+                            document.getElementById("tipo-especialidad").value = "";
+                        } else if (program.value === "pge") {
+                            allUtms.forEach(item => {
+                                item.style.display = "none";
+                                item.value = "";
+                            });
+                            allProgram.forEach(item => {
+                                item.style.display = "none";
+                                item.value = "";
+                            });
+                            programPge.style.display = "block";
+                            utmPge.style.display = "block";
+                            document.getElementById("tipo-especialidad").style.display = "none";
+                            document.getElementById("tipo-especialidad").value = "";
+                        } else {
+                            allUtms.forEach(item => {
+                                item.style.display = "none";
+                                item.value = "";
+                            });
+                            allProgram.forEach(item => {
+                                item.style.display = "none";
+                                item.value = "";
+                            });
+                            document.getElementById("tipo-especialidad").style.display = "block";
+                            utmEsp.style.display = "block";
+                        }
+                    })
+
+                    let allProgram = document.querySelectorAll(".program");
+                    let programPregrado = document.querySelector("#programa-pregrado");
+                    let programPregradoBeca = document.querySelector("#programa-pregrado-beca");
+                    utmPregrado.addEventListener("change", () => {
+                        if (utmPregrado.value === "pregrado-2026-01") {
+                            allProgram.forEach(item => {
+                                item.value = "";
+                                item.style.display = "none";
+                            });
+                            programPregrado.style.display = "block";
+                        } else if (utmPregrado.value === "beca18-2026-01") {
+                            allProgram.forEach(item => {
+                                item.value = "";
+                                item.style.display = "none";
+                            });
+                            programPregradoBeca.style.display = "block";
+                        }
+                    })
+
+                    let tipoEsp = document.querySelector("#tipo-especialidad");
+                    let programEnf = document.querySelector(".programa-esp-enf");
+                    let programEst = document.querySelector(".programa-esp-est");
+                    let programTm = document.querySelector(".programa-esp-tm");
+                    let programVet = document.querySelector(".programa-esp-vet");
+                    tipoEsp.addEventListener("change", () => {
+                        if (tipoEsp.value === "enf") {
+                            allProgram.forEach(item => {
+                                item.value = "";
+                                item.style.display = "none";
+                            });
+                            programEnf.style.display = "block";
+                        } else if (tipoEsp.value === "est") {
+                            allProgram.forEach(item => {
+                                item.value = "";
+                                item.style.display = "none";
+                            });
+                            programEst.style.display = "block";
+                        } else if (tipoEsp.value === "tm") {
+                            allProgram.forEach(item => {
+                                item.value = "";
+                                item.style.display = "none";
+                            });
+                            programTm.style.display = "block";
+                        } else if (tipoEsp.value === "vet") {
+                            allProgram.forEach(item => {
+                                item.value = "";
+                                item.style.display = "none";
+                            });
+                            programVet.style.display = "block";
+                        }
+                    })
+
+                    // SELECT TIPO PROGRAMA
+
+
+
                     let refSocial = document.getElementById('reference');
                     let urlSocial = window.location.href;
                     refSocial.value = urlSocial;
@@ -697,48 +957,19 @@
                         const button = ev.target.querySelector(".form__button");
                         button.disabled = true;
 
-                        let pms = document.getElementById("LEADCF13").value;
-                        let pmContent = '';
-                        switch (pms) {
-                            case '1ab07ab0-d756-f011-bec2-6045bd3a2cb5':
-                                pmContent = 'valerin-alburquerque';
-                                break;
-                            case 'a66076a4-d756-f011-bec2-6045bd3a2cb5':
-                                pmContent = 'robert-chavez';
-                                break;
-                            case '42a76d98-d756-f011-bec2-6045bd3a2cb5':
-                                pmContent = 'jean-paul-carillo';
-                                break;
-                            case '1834c4b6-d756-f011-bec2-6045bd3a2cb5':
-                                pmContent = 'dana-lizarme';
-                                break;
-                            case 'fde17d9e-d756-f011-bec2-6045bd3a2cb5':
-                                pmContent = 'kemerly-isla';
-                                break;
-                            case '4a8a6492-d756-f011-bec2-6045bd3a2cb5':
-                                pmContent = 'flavia-de-la-cruz';
-                                break;
-                            case '1bc7698c-d756-f011-bec2-6045bd3a2cb5':
-                                pmContent = 'eva-esquivel';
-                                break;
-                            case 'bb72bc7f-d756-f011-bec2-6045bd3a2cb5':
-                                pmContent = 'clara-trelles'
-                                break;
-                            default:
-                                break;
-                        }
-
-                        const InstitucionEducativa = document.getElementById("LEADCF204").value;
-                        const Promotor = document.getElementById("LEADCF13").value;
+                        // const InstitucionEducativa = document.getElementById("LEADCF204").value;
+                        // const Promotor = document.getElementById("LEADCF13").value;
                         // const TipoActividad = document.getElementById("LEADCF209").value;
-                        const FechaEvento = document.getElementById("LEADCF208").value;
-                        const PrimerNombre = document.getElementById("name").value;
-                        const ApellidoPaterno = document.getElementById("lastname").value;
-                        const ApellidoMaterno = document.getElementById("second_lastname").value;
-                        const NroDocumento = document.getElementById("number-document").value === "" ? `T${document.getElementById("phone").value}` : document.getElementById("number-document").value;
-                        const Correo = document.getElementById("email").value === "" ? `${document.getElementById("phone").value}@temporal.com` : document.getElementById("email").value;
+                        // const FechaEvento = document.getElementById("LEADCF208").value;
+                        const PrimerNombre = document.getElementById("first-name").value;
+                        const ApellidoPaterno = document.getElementById("first-last-name").value;
+                        const ApellidoMaterno = document.getElementById("second-last-name").value;
+                        const Celular = document.getElementById("phone").value;
+                        const TipoDocumento = Number(document.getElementById("type-document").value);
+                        const NroDocumento = document.getElementById("number-document").value;
+
+                        const Correo = document.getElementById("email").value;
                         const GradoEstudio = Number(document.getElementById("degree-study").value);
-                        const TipoDocumento = 994950000;
                         const CodigoPais = "+51";
                         const Programa = document.getElementById("career").value;
                         const UtmCampaign = document.getElementById("utm_campaign").value;
@@ -747,7 +978,8 @@
                         const UtmMedium = document.getElementById("utm_medium").value;
                         const UtmId = document.getElementById("utm_id").value;
                         const UtmContent = pmContent;
-                        const Celular = document.getElementById("phone").value;
+
+
                         const Celular2 = document.getElementById("phone2").value;
                         const NivelInteres = document.getElementById("LEADCF33").value;
                         const Origen = 8;
@@ -770,8 +1002,8 @@
 
 
                         const datos = {
-                            InstitucionEducativa,
-                            Promotor,
+                            //InstitucionEducativa,
+                            //Promotor,
                             // TipoActividad,
                             FechaEvento,
                             Celular2,
