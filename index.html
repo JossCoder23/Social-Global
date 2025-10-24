@@ -785,6 +785,11 @@
                     let programPge = document.querySelector("#programa-pge");
                     let utmEsp = document.querySelector(".utm_esp");
 
+                    // DATOS PADRES Y DESCENTRALIZADO
+                    // let ctDepDescentralizado = document.querySelector(".padres");
+                    // let ctPadreContent = document.querySelector(".descentralizado");
+                    let alterPregradoCheckCt = document.querySelector(".check-content"); 
+
                     program.addEventListener("change", () => {
                         if (program.value === "pregrado") {
                             allUtms.forEach(item => {
@@ -798,6 +803,7 @@
                             utmPregrado.style.display = "block";
                             document.getElementById("tipo-especialidad").style.display = "none";
                             document.getElementById("tipo-especialidad").value = "";
+                            alterPregradoCheckCt.style.display = "flex";
                         } else if (program.value === "pge") {
                             allUtms.forEach(item => {
                                 item.style.display = "none";
@@ -811,6 +817,7 @@
                             utmPge.style.display = "block";
                             document.getElementById("tipo-especialidad").style.display = "none";
                             document.getElementById("tipo-especialidad").value = "";
+                            alterPregradoCheckCt.style.display = "none";
                         } else {
                             allUtms.forEach(item => {
                                 item.style.display = "none";
